@@ -7,7 +7,7 @@ Clone it down to your machine.
 
 ```
 cd react-exercise
-npx create-react-app .
+npx create-react-app products-app
 ```
 
 Build this:
