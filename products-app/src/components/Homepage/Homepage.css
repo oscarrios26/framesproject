@@ -1,0 +1,16 @@
+#hello {
+  font-size: 30px;
+  text-align: center;
+}
+
+.hoverEffect:hover {
+  transform: scale(1.06);
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hoverEffect {
+  margin-left: 40%;
+}
