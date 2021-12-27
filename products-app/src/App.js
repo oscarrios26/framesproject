@@ -8,7 +8,7 @@ import Nav from "./components/Nav/Nav";
 
 function App() {
   const [product, setProduct] = useState([]);
-  const [selectedImage, setSelectedImage] = useState("");
+ 
 
   useEffect(() => {
     const getProduct = async () => {
@@ -28,16 +28,12 @@ function App() {
             <Route
               path="/"
               element={
-                <Homepage
-                  product={product}
-                  selectedImage={selectedImage}
-                  setSelectedImage={setSelectedImage}
-                />
+                <Homepage product={product}/>
               }
             />
             <Route
               path={"/details/:_id"}
-              element={<Details productdetail={product} />}
+              element={<Details product={product} />}
             />
           </Routes>
         </>

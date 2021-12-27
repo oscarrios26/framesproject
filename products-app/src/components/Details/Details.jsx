@@ -4,7 +4,7 @@ import "./Detail.css";
 export default function Details(props) {
   const params = useParams();
 
-  const allNewInfo = props.productdetail.find((la) => {
+  const update = props.product.find((la) => {
     return params._id === la._id;
   });
 
@@ -12,14 +12,14 @@ export default function Details(props) {
     <>
       <div id="fixedimg">
 
-        <img id="finalinfo" src={allNewInfo.imgURL} alt="gallery" />
+        <img id="finalinfo" src={update.imgURL} alt="gallery" />
         </div>
       <div id="helloor">
         
           
-          <h1 className="titledetail">{allNewInfo.name}</h1>
-          <h2 className="pricedetail">$ {allNewInfo.price}</h2>
-          <h3 id="desdetail">{allNewInfo.description}</h3>
+          <h1 className="titledetail">{update.name}</h1>
+          <h2 className="pricedetail">$ {update.price}</h2>
+          <h3 id="desdetail">{update.description}</h3>
           
       </div>
       
