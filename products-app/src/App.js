@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 import "./App.css";
 import Homepage from "./components/Homepage/Homepage";
-import Detail from "./components/Details/Detail";
+import Details from "./components/Details/Details";
+import Nav from "./components/Nav/Nav";
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-      <Link to="/">ProductsApp</Link>
+      <Nav/>
       <>
         <>
           <Routes>
@@ -36,7 +37,7 @@ function App() {
             />
             <Route
               path={"/details/:_id"}
-              element={<Detail product={product} />}
+              element={<Details productdetail={product} />}
             />
           </Routes>
         </>

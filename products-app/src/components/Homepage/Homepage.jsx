@@ -8,39 +8,44 @@ export default function Homepage(props) {
 
   return (
     <>
-      <div className="grid">
-        <div className="inner">
-          {props.product
-            .filter((val) => {
-              if (search == "") {
-                return val;
-              } else if (
-                val.name.toLowerCase().includes(search.toLowerCase())
-              ) {
-                return val;
-              }
-            })
-            .map((prod, _id) => (
-              <div className="hoverEffect">
-                <Link key={prod._id} to={`/details/${prod._id}`}>
-                  <img src={prod.imgURL} alt="pictures" width="350px" />
-                  <h3>{prod.name}</h3>
-                  <h4>${prod.price}</h4>
-                </Link>
-              </div>
-            ))}
-        </div>
-      </div>
-      <div>
+        <div id="box" >
+        
         <input
+          id="searchbarcss"
           type="search"
           placeholder="search"
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);
           }}
-        />
+          />
+          
       </div>
+      <div className="grid">
+        <div className="inner">
+          {props.product.filter((val) => {
+              if (search === "") {
+                return val;
+              } else if (
+                val.name.toLowerCase().includes(search.toLowerCase())) {
+                return val;
+              }
+            })
+            .map((prod, _id) => {
+              
+              <div className="hoverEffect" key={_id}>
+                <Link id="textdeco" to={`/details/${prod._id}`}>
+                  <img src={prod.imgURL} alt="pictures" width="350px" />
+                  <h3 className="titlecolor"  >{prod.name}</h3>
+                  <h4 className="pricecolor" >$ {prod.price}</h4>
+                </Link>
+              </div>
+            })}
+        </div>
+      </div>
+
+
+    
     </>
   );
 }

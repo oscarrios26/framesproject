@@ -1,0 +1,17 @@
+
+
+#finalinfo {
+  position: absolute;
+  
+
+  width: 500px;
+  height: 500px;
+  margin-left: 250px;
+}
+
+#helloor{
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  font-family: Optima, sans-serif;
+}
