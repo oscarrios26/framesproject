@@ -40,9 +40,11 @@ export default function Homepage(props) {
               ) {
                 return val;
               }
+              return false;
             })
             
-          .map((prod, _id) => (
+            .map((prod, _id) => (
+            
             
             <div className="hoverEffect" key={_id}>
               <Link id="textdeco" to={`/details/${prod._id}`}>
